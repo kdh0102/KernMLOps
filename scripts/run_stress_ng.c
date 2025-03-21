@@ -9,7 +9,7 @@
 
 void execute_command(const char* command) {
   char full_command[512];
-  snprintf(full_command, sizeof(full_command), "%s &", command);
+  snprintf(full_command, sizeof(full_command), "%s", command);
   system(full_command);
 }
 

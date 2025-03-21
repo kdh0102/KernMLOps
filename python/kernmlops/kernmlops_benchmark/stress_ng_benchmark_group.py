@@ -74,6 +74,7 @@ class StressNgBenchmarkGroup(Benchmark):
     def poll(self) -> int | None:
         return_code = None
         if len(self.processes) < self.running_process_idx + 1:
+            print("running benchmark idx:", self.running_process_idx)
             self.benchmarks[self.running_process_idx].setup()
             self.benchmarks[self.running_process_idx].run()
             self.processes.append(self.benchmarks[self.running_process_idx].process)

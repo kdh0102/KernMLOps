@@ -54,7 +54,7 @@ benchmark_config:
           args:
             - "2"
   benchbase:
-    benchbase_benchmark: benchbase/target/benchbase-postgres
+    benchbase_path: benchbase/target/benchbase-postgres
     args:
       - java
       - -jar
@@ -74,11 +74,5 @@ collector_config:
     output_graphs: false
     hooks:
       - memory_usage
-      - process_metadata
-      - quanta_runtime
-      - block_io
       - perf
-      - collapse_huge_pages
-      - mm_rss_stat
-      - process_trace
       - disk_usage

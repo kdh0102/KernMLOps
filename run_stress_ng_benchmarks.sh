@@ -11,6 +11,7 @@ create_yaml_file() {
     echo "    output_graphs: false" >>"$filename"
     echo "    hooks:" >>"$filename"
     echo "      - memory_usage" >>"$filename"
+    echo "      - perf" >>"$filename"
     echo "      - disk_usage" >>"$filename"
 
     echo "benchmark_config:" >>"$filename"
@@ -30,6 +31,6 @@ for i in {0..0}; do
     starting_idx=$(($i * 100))
     create_yaml_file "overrides.yaml" "starting_idx:$starting_idx" "num_exps:100" "num_reps:1"
     make stress-ng-benchmarks
-    mv data/curated data/iomix-$i-curated
+    mv data/curated data/stressor-mix-$i-curated
     rm -rf tmp-stress-ng-*
 done

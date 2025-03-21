@@ -11,12 +11,7 @@ from data_schema.perf.perf_schema import (
     PerfCollectionTable,
 )
 # from data_schema.perf.hardware.cycles_perf import CPUCyclesPerfTable, InstructionsPerfTable
-from data_schema.perf.tlb_perf import (
-    DTLBPerfTable,
-    DTLBWalkDurationPerfTable,
-    ITLBPerfTable,
-    TLBFlushPerfTable,
-)
+
 
 perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     # DTLBPerfTable.name(): DTLBPerfTable,

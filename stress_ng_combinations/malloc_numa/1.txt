@@ -1,0 +1,1 @@
+timeout 5.0 stress-ng --malloc 1

@@ -66,6 +66,26 @@ class PerfHardwareConfig:
     def config(cls, event: Event) -> int:
         return event.value
 
+class PerfSoftwareConfig:
+    # From perf_hw_id in uapi/linux/perf_event.h
+    class Event(Enum):
+        PERF_COUNT_SW_CPU_CLOCK = 0
+        PERF_COUNT_SW_TASK_CLOCK = 1
+        PERF_COUNT_SW_PAGE_FAULTS = 2
+        PERF_COUNT_SW_CONTEXT_SWITCHES = 3
+        PERF_COUNT_SW_CPU_MIGRATIONS = 4
+        PERF_COUNT_SW_PAGE_FAULTS_MIN = 5
+        PERF_COUNT_SW_PAGE_FAULTS_MAJ = 6
+        PERF_COUNT_SW_ALIGNMENT_FAULTS = 7
+        PERF_COUNT_SW_EMULATION_FAULTS = 8
+        PERF_COUNT_SW_DUMMY = 9
+        PERF_COUNT_SW_BPF_OUTPUT = 10
+        PERF_COUNT_SW_CGROUP_SWITCHES = 11
+
+    @classmethod
+    def config(cls, event: Event) -> int:
+        return event.value
+
 class PerfCollectionTable(CollectionTable, Protocol):
 
     @classmethod

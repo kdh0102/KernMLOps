@@ -10,7 +10,8 @@ from data_schema.perf.perf_schema import (
     CustomHWEventID,
     PerfCollectionTable,
 )
-# from data_schema.perf.hardware.cycles_perf import CPUCyclesPerfTable, InstructionsPerfTable
+from data_schema.perf.hardware.cycles_perf import CPUCyclesPerfTable
+from data_schema.perf.software.sw_perf import SoftwareCPUCyclesPerfTable, MajorPageFaultPerfTable
 
 
 perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
@@ -18,12 +19,14 @@ perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     # ITLBPerfTable.name(): ITLBPerfTable,
     # TLBFlushPerfTable.name(): TLBFlushPerfTable,
     # DTLBWalkDurationPerfTable.name(): DTLBWalkDurationPerfTable,
-    L1DPerfTable.name(): L1DPerfTable,
+    # L1DPerfTable.name(): L1DPerfTable,
     # L1IPerfTable.name(): L1IPerfTable,
     LLCPerfTable.name(): LLCPerfTable,
     LocalMemPerfTable.name(): LocalMemPerfTable,
-    BranchPerfTable.name(): BranchPerfTable,
-    # CPUCyclesPerfTable.name(): CPUCyclesPerfTable,
+    # BranchPerfTable.name(): BranchPerfTable,
+    CPUCyclesPerfTable.name(): CPUCyclesPerfTable,
+    SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
+    MajorPageFaultPerfTable.name(): MajorPageFaultPerfTable,
     # InstructionsPerfTable.name(): InstructionsPerfTable,
 }
 

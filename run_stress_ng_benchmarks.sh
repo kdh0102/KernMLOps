@@ -26,11 +26,17 @@ create_yaml_file() {
     done
 }
 
-for i in {0..0}; do
-    rm -rf data/curated
-    starting_idx=$(($i * 100))
-    create_yaml_file "overrides.yaml" "starting_idx:$starting_idx" "num_exps:100" "num_reps:1"
-    make stress-ng-benchmarks
-    mv data/curated data/stressor-mix-$i-curated
-    rm -rf tmp-stress-ng-*
+dir_path="/users/dhkim/workspace/KernMLOps/stress_ng_combinations"
+for dir in "$dir_path"/*/; do
+    dir_name=$(basename "$dir")
+    echo "Directory: $dir_name"
 done
+
+# for i in {0..0}; do
+#     rm -rf data/curated
+#     starting_idx=$(($i * 100))
+#     create_yaml_file "overrides.yaml" "starting_idx:$starting_idx" "num_exps:100" "num_reps:1"
+#     make stress-ng-benchmarks
+#     mv data/curated data/stressor-mix-$i-curated
+#     rm -rf tmp-stress-ng-*
+# done

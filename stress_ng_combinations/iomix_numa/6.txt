@@ -1,0 +1,2 @@
+timeout 0.0 stress-ng --iomix 1
+timeout 5.0 stress-ng --numa 1

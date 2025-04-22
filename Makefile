@@ -234,8 +234,8 @@ docker:
 
 	@mkdir -p ${EXTERNAL_BENCHMARK_DIR}
 	@docker --context ${CONTAINER_CONTEXT} run --rm \
+	--name ${IMAGE_NAME} \
 	-v ${SRC_DIR}/:${CONTAINER_SRC_DIR} \
-	-v ${USER_PATH}/${UNAME}/.ssh:/root/.ssh \
 	-v ${KERNEL_DEV_HEADERS_DIR}/:${KERNEL_DEV_HEADERS_DIR}:ro \
 	-v ${KERNEL_DEV_MODULES_DIR}/:${KERNEL_DEV_MODULES_DIR}:ro \
 	-v ${BENCHMARK_DIR}/:${USER_PATH}/${UNAME}/kernmlops-benchmark \

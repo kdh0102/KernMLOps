@@ -31,7 +31,6 @@ for dir in "$dir_path"/*/; do
     dir_name=$(basename "$dir")
     echo "Directory: $dir_name"
     rm -rf data/curated
-    starting_idx=$(($i * 100))
     create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:6" "num_reps:10"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated

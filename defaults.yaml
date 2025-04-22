@@ -69,7 +69,7 @@ benchmark_config:
 
 collector_config:
   generic:
-    poll_rate: 0.005
+    poll_rate: 0.05
     output_dir: data
     output_graphs: false
     hooks:

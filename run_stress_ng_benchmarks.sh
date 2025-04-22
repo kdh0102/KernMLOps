@@ -33,7 +33,7 @@ for dir in "$dir_path"/*/; do
     rm -rf data/curated
     rm -rf scripts/stress-ng-args
     cp -r $dir scripts/stress-ng-args
-    create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:6" "num_reps:10"
+    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:6" "num_reps:10"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated
     rm -rf tmp-stress-ng-*

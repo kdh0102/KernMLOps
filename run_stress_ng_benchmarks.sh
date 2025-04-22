@@ -26,7 +26,7 @@ create_yaml_file() {
     done
 }
 
-dir_path="/users/dhkim/workspace/KernMLOps/stress_ng_combinations"
+dir_path="/KernMLOps/stress_ng_combinations"
 for dir in "$dir_path"/*/; do
     dir_name=$(basename "$dir")
     echo "Directory: $dir_name"

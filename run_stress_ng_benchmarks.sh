@@ -40,12 +40,3 @@ for dir in "$dir_path"/*/; do
     scp "data/$dir_name-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results
     rm -rf tmp-stress-ng-*
 done
-
-# for i in {0..0}; do
-#     rm -rf data/curated
-#     starting_idx=$(($i * 100))
-#     create_yaml_file "overrides.yaml" "starting_idx:$starting_idx" "num_exps:100" "num_reps:1"
-#     make stress-ng-benchmarks
-#     mv data/curated data/stressor-mix-$i-curated
-#     rm -rf tmp-stress-ng-*
-# done

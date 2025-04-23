@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fault 1 --fault-access all
+timeout 5.0 stress-ng --fault 16
 
 
 

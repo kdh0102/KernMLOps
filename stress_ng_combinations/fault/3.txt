@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fault 4 --fault-access read
+timeout 5.0 stress-ng --fault 32
 
 
 

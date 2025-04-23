@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fault 4 --fault-access all
+timeout 5.0 stress-ng --hdd 32 --hdd-bytes 512m --hdd-write-size 4k
 
 
 

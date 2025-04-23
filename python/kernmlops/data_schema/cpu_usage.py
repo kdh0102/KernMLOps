@@ -19,7 +19,7 @@ class CPUUsageTable(CollectionTable):
     def schema(cls) -> pl.Schema:
         return pl.Schema({
             UPTIME_TIMESTAMP: pl.Int64(),
-            "cpu_id": pl.Int64(),
+            "cpu": pl.Int64(),
             "cpu_usage": pl.Float32(),
         })
 

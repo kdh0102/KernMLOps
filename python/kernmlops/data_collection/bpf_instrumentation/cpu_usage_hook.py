@@ -14,17 +14,17 @@ from data_schema.cpu_usage import CPUUsageTable
 class CPUUsageData:
   ts_uptime_us: int
 
-  cpu_id: int
+  cpu: int
   cpu_usage: float
 
   @classmethod
   def from_usage_list(cls, ts_uptime_us: int, usage_list: list[float]) -> CPUUsageData:
     usage_data_list = []
-    for cpu_id, cpu_usage in enumerate(usage_list):
+    for cpu, cpu_usage in enumerate(usage_list):
       usage_data_list.append(
         cls(
           ts_uptime_us=ts_uptime_us,
-          cpu_id=cpu_id,
+          cpu=cpu,
           cpu_usage=cpu_usage,
         )
       )

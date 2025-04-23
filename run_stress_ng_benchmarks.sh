@@ -39,7 +39,7 @@ start_index=$((chunk_index * chunk_size))
 end_index=$((start_index + chunk_size))
 
 if ((start_index >= total_dirs)); then
-    echo "Chunk index out of range."
+    echo "Chunk index out of range: $start_index >= $total_dirs"
     exit 1
 fi
 

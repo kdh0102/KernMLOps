@@ -33,10 +33,12 @@ for dir in "$dir_path"/*/; do
     rm -rf data/curated
     rm -rf scripts/stress-ng-args
     cp -r $dir scripts/stress-ng-args
-    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:6" "num_reps:10"
+    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:1" "num_reps:5"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated
     zip -r "data/$dir_name-curated.zip" "data/$dir_name-curated"
     scp "data/$dir_name-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results
+    rm -rf data/$dir_name-curated
+    rm -rf data/$dir_name-curated.zip
     rm -rf tmp-stress-ng-*
 done

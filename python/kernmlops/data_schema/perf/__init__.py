@@ -11,7 +11,7 @@ from data_schema.perf.perf_schema import (
     PerfCollectionTable,
 )
 from data_schema.perf.hardware.cycles_perf import CPUCyclesPerfTable
-from data_schema.perf.software.sw_perf import SoftwareCPUCyclesPerfTable, MajorPageFaultPerfTable
+from data_schema.perf.software.sw_perf import SoftwareCPUCyclesPerfTable, MajorPageFaultPerfTable, SoftwareTaskClockPerfTable
 
 
 perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
@@ -26,6 +26,7 @@ perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     # BranchPerfTable.name(): BranchPerfTable,
     # CPUCyclesPerfTable.name(): CPUCyclesPerfTable,
     SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
+    SoftwareTaskClockPerfTable.name(): SoftwareTaskClockPerfTable,
     MajorPageFaultPerfTable.name(): MajorPageFaultPerfTable,
     # InstructionsPerfTable.name(): InstructionsPerfTable,
 }

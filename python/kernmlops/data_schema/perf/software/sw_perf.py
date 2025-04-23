@@ -194,7 +194,7 @@ class MajorPageFaultPerfTable(PerfCollectionTable):
     @classmethod
     def ev_config(cls) -> int:
       return PerfSoftwareConfig.config(
-          event=PerfSoftwareConfig.Event.PERF_COUNT_SW_PAGE_FAULTS_MAJ,
+          event=PerfSoftwareConfig.Event.PERF_COUNT_SW_PAGE_FAULTS,
       )
 
     @classmethod

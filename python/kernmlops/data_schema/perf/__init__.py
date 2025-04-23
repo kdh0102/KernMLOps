@@ -25,8 +25,8 @@ perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     LocalMemPerfTable.name(): LocalMemPerfTable,
     # BranchPerfTable.name(): BranchPerfTable,
     # CPUCyclesPerfTable.name(): CPUCyclesPerfTable,
-    SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
-    SoftwareTaskClockPerfTable.name(): SoftwareTaskClockPerfTable,
+    # SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
+    # SoftwareTaskClockPerfTable.name(): SoftwareTaskClockPerfTable,
     MajorPageFaultPerfTable.name(): MajorPageFaultPerfTable,
     # InstructionsPerfTable.name(): InstructionsPerfTable,
 }

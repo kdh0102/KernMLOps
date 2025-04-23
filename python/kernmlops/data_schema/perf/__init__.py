@@ -21,14 +21,14 @@ perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     # DTLBWalkDurationPerfTable.name(): DTLBWalkDurationPerfTable,
     # L1DPerfTable.name(): L1DPerfTable,
     # L1IPerfTable.name(): L1IPerfTable,
-    LLCPerfTable.name(): LLCPerfTable,
+    # LLCPerfTable.name(): LLCPerfTable,
     # LLCHitPerfTable.name(): LLCHitPerfTable,
-    LocalMemPerfTable.name(): LocalMemPerfTable,
+    # LocalMemPerfTable.name(): LocalMemPerfTable,
     LocalMemHitPerfTable.name(): LocalMemHitPerfTable,
     # BranchPerfTable.name(): BranchPerfTable,
     # CPUCyclesPerfTable.name(): CPUCyclesPerfTable,
-    SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
-    MajorPageFaultPerfTable.name(): MajorPageFaultPerfTable,
+    # SoftwareCPUCyclesPerfTable.name(): SoftwareCPUCyclesPerfTable,
+    # MajorPageFaultPerfTable.name(): MajorPageFaultPerfTable,
     # InstructionsPerfTable.name(): InstructionsPerfTable,
 }
 

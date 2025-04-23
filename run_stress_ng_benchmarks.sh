@@ -34,7 +34,7 @@ for dir in "$dir_path"/*/; do
     rm -rf data/curated
     rm -rf scripts/stress-ng-args
     cp -r $dir scripts/stress-ng-args
-    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:1" "num_reps:5"
+    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:6" "num_reps:10"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated
     zip -r "data/$dir_name-curated.zip" "data/$dir_name-curated"

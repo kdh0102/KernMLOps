@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --numa 1 --numa-size 1g --numa-stride 256k
+timeout 5.0 stress-ng --numa 16 --numa-bytes 1g
 
 
 

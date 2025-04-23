@@ -127,7 +127,7 @@ class LocalMemHitPerfTable(PerfCollectionTable):
 
     @classmethod
     def component_name(cls) -> str:
-        return "LocalMem"
+        return "LocalMemHit"
 
     @classmethod
     def measured_event_name(cls) -> str:

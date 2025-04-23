@@ -23,7 +23,7 @@ perf_table_types: Mapping[str, type[PerfCollectionTable]] = {
     # L1IPerfTable.name(): L1IPerfTable,
     LLCPerfTable.name(): LLCPerfTable,
     # LLCHitPerfTable.name(): LLCHitPerfTable,
-    # LocalMemPerfTable.name(): LocalMemPerfTable,
+    LocalMemPerfTable.name(): LocalMemPerfTable,
     LocalMemHitPerfTable.name(): LocalMemHitPerfTable,
     # BranchPerfTable.name(): BranchPerfTable,
     # CPUCyclesPerfTable.name(): CPUCyclesPerfTable,

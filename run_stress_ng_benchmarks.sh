@@ -6,7 +6,7 @@ create_yaml_file() {
     echo "---" >"$filename"
     echo "collector_config:" >>"$filename"
     echo "  generic:" >>"$filename"
-    echo "    poll_rate: 0.05" >>"$filename"
+    echo "    poll_rate: 0.1" >>"$filename"
     echo "    output_dir: data" >>"$filename"
     echo "    output_graphs: false" >>"$filename"
     echo "    hooks:" >>"$filename"

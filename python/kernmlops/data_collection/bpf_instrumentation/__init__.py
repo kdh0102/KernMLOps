@@ -11,6 +11,7 @@ from data_collection.bpf_instrumentation.collapse_huge_page import (
     CollapseHugePageBPFHook,
 )
 from data_collection.bpf_instrumentation.disk_usage_hook import DiskUsageHook
+from data_collection.bpf_instrumentation.cpu_usage_hook import CPUUsageHook
 from data_collection.bpf_instrumentation.file_data_hook import FileDataBPFHook
 from data_collection.bpf_instrumentation.fork_and_exit import TraceProcessHook
 from data_collection.bpf_instrumentation.memory_usage_hook import MemoryUsageHook
@@ -28,6 +29,7 @@ all_hooks: Final[Mapping[str, type[BPFProgram]]] = {
     FileDataBPFHook.name(): FileDataBPFHook,
     MemoryUsageHook.name(): MemoryUsageHook,
     DiskUsageHook.name(): DiskUsageHook,
+    CPUUsageHook.name(): CPUUsageHook,
     ProcessMetadataHook.name(): ProcessMetadataHook,
     QuantaRuntimeBPFHook.name(): QuantaRuntimeBPFHook,
     BlockIOBPFHook.name(): BlockIOBPFHook,

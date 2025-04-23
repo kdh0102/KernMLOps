@@ -13,6 +13,7 @@ create_yaml_file() {
     echo "      - memory_usage" >>"$filename"
     echo "      - perf" >>"$filename"
     echo "      - disk_usage" >>"$filename"
+    echo "      - cpu_usage" >>"$filename"
 
     echo "benchmark_config:" >>"$filename"
     echo "  stress_ng_benchmarks:" >>"$filename"

@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --numa 1 --numa-nodes 1 --numa-size 64m --numa-stride 64k
+timeout 5.0 stress-ng --numa 2 --numa-size 64m --numa-stride 64k
 
 
 

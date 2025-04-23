@@ -4,8 +4,8 @@ from data_schema.perf.hw_cache.branch_perf import BranchPerfTable
 # from data_schema.perf.hw_cache.tlb_perf import DTLBPerfTable, ITLBPerfTable, TLBFlushPerfTable
 from data_schema.perf.hw_cache.l1d_perf import L1DPerfTable
 # from data_schema.perf.hw_cache.l1i_perf import L1IPerfTable
-from data_schema.perf.hw_cache.llc_perf import LLCPerfTable, LLCHitPerfTable
-from data_schema.perf.hw_cache.local_perf import LocalMemPerfTable, LocalMemHitPerfTable
+from data_schema.perf.hw_cache.llc_perf import LLCPerfTable
+from data_schema.perf.hw_cache.local_perf import LocalMemPerfTable
 from data_schema.perf.perf_schema import (
     CustomHWEventID,
     PerfCollectionTable,

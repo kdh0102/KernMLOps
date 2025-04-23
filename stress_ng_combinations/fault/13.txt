@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fault 4 --fault-bytes 256m --fault-access write
+timeout 5.0 stress-ng --fault 16 --fault-bytes 256m --fault-access write
 
 
 

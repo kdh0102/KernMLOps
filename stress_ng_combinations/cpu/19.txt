@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cpu 2 --cpu-method all --cpu-load 100
+timeout 5.0 stress-ng --cpu 4 --cpu-method prime --cpu-load 100
 
 
 

@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --hdd 2 --hdd-bytes 1g --hdd-write-size 4k --hdd-read-size 4k --hdd-op rw --hdd-rw-ratio 50 --hdd-sync no
+timeout 5.0 stress-ng --hdd 16 --hdd-bytes 512m --hdd-write-size 64k --hdd-op rw --hdd-rw-ratio 100 --hdd-sync no
 
 
 

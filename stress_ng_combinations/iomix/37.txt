@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 4 --iomix-bytes 256m --iomix-ratio 50
+timeout 5.0 stress-ng --iomix 16 --iomix-bytes 256m --iomix-ratio 50
 
 
 

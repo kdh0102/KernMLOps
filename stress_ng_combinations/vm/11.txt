@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --vm 1 --vm-bytes 1g --vm-stride 2m --vm-populate no
+timeout 5.0 stress-ng --vm 4 --vm-bytes 4g --vm-populate no
 
 
 

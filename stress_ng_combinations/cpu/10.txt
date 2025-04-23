@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cpu 1 --cpu-method float --cpu-load 90
+timeout 5.0 stress-ng --cpu 1 --cpu-method float --cpu-load 75
 
 
 

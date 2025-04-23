@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fft 4 --fft-size 16384 --fft-type complex
+timeout 5.0 stress-ng --fft 16 --fft-size 16384 --fft-type complex
 
 
 

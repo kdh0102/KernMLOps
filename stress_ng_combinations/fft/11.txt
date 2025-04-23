@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fft 2 --fft-size 4096 --fft-type real
+timeout 5.0 stress-ng --fft 4 --fft-size 4096 --fft-type real
 
 
 

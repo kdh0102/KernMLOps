@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --prime 4 --prime-method sieve --prime-max 100000
+timeout 5.0 stress-ng --prime 16 --prime-method sieve --prime-max 100000
 
 
 

@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 2 --cache-level L2 --cache-size 4m
+timeout 5.0 stress-ng --cache 4 --cache-level L2 --cache-size 4m
 
 
 

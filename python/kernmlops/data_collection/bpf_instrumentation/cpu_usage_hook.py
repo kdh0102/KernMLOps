@@ -70,7 +70,7 @@ class CPUUsageHook(BPFProgram):
       CPUUsageTable.from_df_id(
         pl.DataFrame(*[
           raw_data.parse()
-          for raw_data in self.disk_usage
+          for raw_data in self.cpu_usage
         ]),
         collection_id=self.collection_id,
       )
@@ -80,6 +80,6 @@ class CPUUsageHook(BPFProgram):
     self.cpu_usage.clear()
 
   def pop_data(self) -> list[CollectionTable]:
-    disk_table = self.data()
+    cpu_table = self.data()
     self.clear()
-    return disk_table
+    return cpu_table

@@ -1,3 +1,6 @@
+chunk_index="$1" # Get the chunk index (M, 0-based) from the second argument
+chunk_size="$2"  # Get the chunk size (N) from the first argument
+
 create_yaml_file() {
     local filename="$1"
     shift
@@ -28,11 +31,23 @@ create_yaml_file() {
 }
 
 dir_path="/KernMLOps/stress_ng_combinations"
-for dir in "$dir_path"/*/; do
+
+dirs=("$dir_path"/*/)
+total_dirs=${#dirs[@]}
+start_index=$((chunk_index * chunk_size))
+end_index=$((start_index + chunk_size))
+
+if ((start_index >= total_dirs)); then
+    echo "Chunk index out of range."
+    exit 1
+fi
+
+for ((i = start_index; i < end_index && i < total_dirs; i++)); do
+    dir="${dirs[i]}"
     dir_name=$(basename "$dir")
     rm -rf data/curated
     rm -rf scripts/stress-ng-args
-    cp -r $dir scripts/stress-ng-args
+    cp -r "$dir" scripts/stress-ng-args
     file_count=$(find scripts/stress-ng-args -type f -name "*.txt" | wc -l)
     echo "File count: $file_count, Directory: $dir_name"
     create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:$file_count" "num_reps:10"

@@ -30,11 +30,12 @@ create_yaml_file() {
 dir_path="/KernMLOps/stress_ng_combinations"
 for dir in "$dir_path"/*/; do
     dir_name=$(basename "$dir")
-    echo "Directory: $dir_name"
     rm -rf data/curated
     rm -rf scripts/stress-ng-args
     cp -r $dir scripts/stress-ng-args
-    create_yaml_file "overrides.yaml" "starting_idx:1" "num_exps:6" "num_reps:10"
+    file_count=$(find scripts/stress-ng-args -type f -name "*.txt" | wc -l)
+    echo "File count: $file_count, Directory: $dir_name"
+    create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:$file_count" "num_reps:10"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated
     zip -r "data/$dir_name-curated.zip" "data/$dir_name-curated"

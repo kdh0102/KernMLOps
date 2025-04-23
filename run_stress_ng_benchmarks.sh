@@ -1,5 +1,5 @@
 chunk_index="$1" # Get the chunk index (M, 0-based) from the second argument
-chunk_size="$2"  # Get the chunk size (N) from the first argument
+num_chunks="$2"  # Get the chunk size (N) from the first argument
 
 create_yaml_file() {
     local filename="$1"
@@ -35,6 +35,7 @@ host_name=$(hostname)
 
 dirs=("$dir_path"/*/)
 total_dirs=${#dirs[@]}
+chunk_size=$((total_dirs / num_chunks))
 start_index=$((chunk_index * chunk_size))
 end_index=$((start_index + chunk_size))
 

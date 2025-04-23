@@ -66,12 +66,12 @@ class CPUUsageHook(BPFProgram):
     pass
 
   def data(self) -> list[CollectionTable]:
+    merged_list = []
+    for inner_list in [raw_data.parse() for raw_data in self.cpu_usage]:
+      merged_list.extend(inner_list)
     return [
       CPUUsageTable.from_df_id(
-        pl.DataFrame(*[
-          raw_data.parse()
-          for raw_data in self.cpu_usage
-        ]),
+        pl.DataFrame(merged_list),
         collection_id=self.collection_id,
       )
     ]

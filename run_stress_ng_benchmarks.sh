@@ -52,7 +52,7 @@ for ((i = start_index; i < end_index && i < total_dirs; i++)); do
     cp -r "$dir" scripts/stress-ng-args
     file_count=$(find scripts/stress-ng-args -type f -name "*.txt" | wc -l)
     echo "File count: $file_count, Directory: $dir_name"
-    create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:1" "num_reps:1"
+    create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:$file_count" "num_reps:1"
     make stress-ng-benchmarks
     mv data/curated data/$dir_name-curated
     zip -r "data/$dir_name-curated.zip" "data/$dir_name-curated"

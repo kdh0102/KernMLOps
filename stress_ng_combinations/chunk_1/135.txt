@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 16 --matrix-3d 1 --numa 32
+timeout 5.0 stress-ng --logmath 1
 
 
 

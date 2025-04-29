@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --matrix-3d 16 --numa 32
+timeout 5.0 stress-ng --affinity 100%
 
 
 

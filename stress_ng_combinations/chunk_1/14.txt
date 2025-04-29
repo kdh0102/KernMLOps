@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --matrix-3d 32 --numa 16
+timeout 5.0 stress-ng --handle 100%
 
 
 

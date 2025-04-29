@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --malloc 1 --matrix-3d 1 --numa 16
+timeout 5.0 stress-ng --apparmor 50%
 
 
 

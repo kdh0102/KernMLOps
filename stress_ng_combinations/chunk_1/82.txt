@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 1 --malloc 1 --numa 16
+timeout 5.0 stress-ng --kcmp 50%
 
 
 

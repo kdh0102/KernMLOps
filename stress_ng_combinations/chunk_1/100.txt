@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 1 --malloc 16 --matrix-3d 1
+timeout 5.0 stress-ng --landlock 50%
 
 
 

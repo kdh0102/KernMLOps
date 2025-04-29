@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 32 --malloc 16 --matrix-3d 32
+timeout 5.0 stress-ng --fp-error 100%
 
 
 

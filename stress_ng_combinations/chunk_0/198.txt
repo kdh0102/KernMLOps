@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 32 --matrix-3d 1 --numa 16
+timeout 5.0 stress-ng --fibsearch 1
 
 
 

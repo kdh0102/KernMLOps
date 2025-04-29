@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 32 --malloc 1 --numa 1
+timeout 5.0 stress-ng --mmapfiles 100%
 
 
 

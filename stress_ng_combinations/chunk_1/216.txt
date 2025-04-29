@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 32 --malloc 1 --matrix-3d 16
+timeout 5.0 stress-ng --mmaphuge 1
 
 
 

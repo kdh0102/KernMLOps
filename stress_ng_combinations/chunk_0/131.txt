@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 16 --numa 32
+timeout 5.0 stress-ng --dfp 100%
 
 
 

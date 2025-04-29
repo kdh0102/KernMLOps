@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 1 --malloc 16 --matrix-3d 1 --numa 32
+timeout 5.0 stress-ng --cpu-sched 50%
 
 
 

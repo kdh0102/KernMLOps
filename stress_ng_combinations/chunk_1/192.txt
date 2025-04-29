@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 32
+timeout 5.0 stress-ng --misaligned 1
 
 
 

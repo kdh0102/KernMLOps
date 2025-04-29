@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 32 --malloc 1
+timeout 5.0 stress-ng --file-ioctl 50%
 
 
 

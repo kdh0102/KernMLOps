@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --malloc 32 --matrix-3d 32 --numa 1
+timeout 5.0 stress-ng --ioport 50%
 
 
 

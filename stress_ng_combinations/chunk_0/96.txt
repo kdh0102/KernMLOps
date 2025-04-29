@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 1 --malloc 16
+timeout 5.0 stress-ng --copy-file 1
 
 
 

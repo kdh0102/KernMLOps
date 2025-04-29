@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --matrix-3d 16
+timeout 5.0 stress-ng --af-alg 100%
 
 
 

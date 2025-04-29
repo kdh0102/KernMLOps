@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cache 16 --iomix 32 --malloc 32 --matrix-3d 16 --numa 16
+timeout 5.0 stress-ng --msyncmany 50%
 
 
 

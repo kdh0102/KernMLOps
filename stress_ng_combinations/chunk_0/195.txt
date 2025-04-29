@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --iomix 32 --numa 32
+timeout 5.0 stress-ng --fd-race 1
 
 
 

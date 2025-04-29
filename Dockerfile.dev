@@ -52,7 +52,6 @@ RUN apt update -y \
     netcat-openbsd \
     nmap \
     maven \
-    stress-ng \
     && apt clean
 
 # Install MongoDB

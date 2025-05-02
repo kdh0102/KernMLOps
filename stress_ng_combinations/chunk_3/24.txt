@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --sigvtalrm 1
+timeout 5.0 stress-ng --fallocate 40 --radixsort 1 --readahead 20
 
 
 

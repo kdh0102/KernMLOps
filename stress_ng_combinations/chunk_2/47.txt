@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --peterson 100%
+timeout 5.0 stress-ng --fallocate 20 --radixsort 20 --readahead 40 --tlb-shootdown 40
 
 
 

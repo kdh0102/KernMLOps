@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --sockmany 50%
+timeout 5.0 stress-ng --fallocate 40 --radixsort 40 --readahead 1
 
 
 

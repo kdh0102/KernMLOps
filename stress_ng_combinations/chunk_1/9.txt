@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --goto 1
+timeout 5.0 stress-ng --fallocate 1 --readahead 20 --tlb-shootdown 1
 
 
 

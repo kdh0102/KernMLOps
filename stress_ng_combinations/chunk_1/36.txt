@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --icmp-flood 1
+timeout 5.0 stress-ng --fallocate 1 --radixsort 20 --readahead 1
 
 
 

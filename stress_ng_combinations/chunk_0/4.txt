@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --acl 50%
+timeout 5.0 stress-ng --readahead 1
 
 
 

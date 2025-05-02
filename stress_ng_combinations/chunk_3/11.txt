@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --sigrt 100%
+timeout 5.0 stress-ng --fallocate 40 --readahead 20 --tlb-shootdown 40
 
 
 

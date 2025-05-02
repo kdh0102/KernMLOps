@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --cachehammer 100%
+timeout 5.0 stress-ng --radixsort 40 --readahead 20 --tlb-shootdown 40
 
 
 

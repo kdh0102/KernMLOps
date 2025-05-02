@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --bsearch 50%
+timeout 5.0 stress-ng --radixsort 40 --tlb-shootdown 1
 
 
 

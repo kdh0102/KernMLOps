@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --apparmor 50%
+timeout 5.0 stress-ng --radixsort 1 --readahead 1 --tlb-shootdown 20
 
 
 

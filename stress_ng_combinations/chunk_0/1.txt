@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --access 50%
+timeout 5.0 stress-ng --tlb-shootdown 1
 
 
 

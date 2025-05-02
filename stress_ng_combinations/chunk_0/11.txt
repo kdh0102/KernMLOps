@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --affinity 100%
+timeout 5.0 stress-ng --readahead 20 --tlb-shootdown 40
 
 
 

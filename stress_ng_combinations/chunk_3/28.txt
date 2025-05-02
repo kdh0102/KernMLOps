@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --sigxcpu 50%
+timeout 5.0 stress-ng --fallocate 40 --radixsort 1 --readahead 40
 
 
 

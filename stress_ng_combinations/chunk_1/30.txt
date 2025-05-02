@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --hyperbolic 1
+timeout 5.0 stress-ng --fallocate 1 --radixsort 1 --readahead 40 --tlb-shootdown 20
 
 
 

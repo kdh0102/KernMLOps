@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --netlink-proc 100%
+timeout 5.0 stress-ng --fallocate 20 --readahead 20 --tlb-shootdown 40
 
 
 

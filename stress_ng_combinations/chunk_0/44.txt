@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --branch 100%
+timeout 5.0 stress-ng --radixsort 20 --readahead 40
 
 
 

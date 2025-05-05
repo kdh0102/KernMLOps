@@ -217,7 +217,6 @@ class MemcachedBenchmark(Benchmark):
     def to_run_info_dict(self) -> dict[str, list]:
         return {
             "benchmark": [self.name()],
-            "args": [" ".join(self.config.args)],
             "start_ts_us": [self.start_timestamp],
             "finish_ts_us": [self.finish_timestamp],
             "return_code": [self.process.returncode],

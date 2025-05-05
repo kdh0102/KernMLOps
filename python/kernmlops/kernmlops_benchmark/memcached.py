@@ -51,6 +51,7 @@ class MemcachedBenchmark(Benchmark):
         return MemcachedBenchmark(generic_config=generic_config, config=memcached_config)
 
     def __init__(self, *, generic_config: GenericBenchmarkConfig, config: MemcachedConfig):
+        super().__init__()
         self.generic_config = generic_config
         self.config = config
         self.benchmark_dir = self.generic_config.get_benchmark_dir() / "ycsb"

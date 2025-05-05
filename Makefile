@@ -60,8 +60,8 @@ COLLECTION_BENCHMARK ?= faux
 EXTERNAL_BENCHMARK_DIR ?= ${HOME}/kernmlops-benchmark
 BENCHMARK_DIR ?= ${USER_PATH}/${UNAME}/kernmlops-benchmark
 STRESS_NG_DIR ?= ${USER_PATH}/${UNAME}/stress-ng
-YCSB_BENCHMARK_DIR ?= ${BENCHMARK_DIR}/ycsb
-REDIS_BENCHMARK_DIR ?= ${BENCHMARK_DIR}/redis
+YCSB_BENCHMARK_DIR ?= /home/${UNAME}/kernmlops-benchmark/ycsb
+REDIS_BENCHMARK_DIR ?= /home/${UNAME}/kernmlops-benchmark/redis
 MEMCACHED_PORT ?= 11211
 
 # Provisioning variables
@@ -239,9 +239,8 @@ docker:
 	-v ${SRC_DIR}/:${CONTAINER_SRC_DIR} \
 	-v ${KERNEL_DEV_HEADERS_DIR}/:${KERNEL_DEV_HEADERS_DIR}:ro \
 	-v ${KERNEL_DEV_MODULES_DIR}/:${KERNEL_DEV_MODULES_DIR}:ro \
-	-v ${BENCHMARK_DIR}/:${USER_PATH}/${UNAME}/kernmlops-benchmark \
-	-v ${BENCHMARK_DIR}/:${BENCHMARK_DIR} \
-	-v ${STRESS_NG_DIR}/:${STRESS_NG_DIR} \
+	-v ${BENCHMARK_DIR}/:/home/${UNAME}/kernmlops-benchmark \
+	-v ${STRESS_NG_DIR}/:/home/${UNAME}/stress-ng \
 	-v /sys/kernel/:/sys/kernel \
 	${KERNEL_DEV_SPECIFIC_HEADERS_MOUNT} \
 	${KERNMLOPS_CONTAINER_MOUNTS} \

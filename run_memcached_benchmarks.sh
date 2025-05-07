@@ -45,7 +45,7 @@ if [[ -f "$config_file_path" ]]; then
         echo "Parsed values: $var1, $var2, $var3, $var4, $var5, $var6, $var7"
         rm -rf data/curated
         create_yaml_file "overrides.yaml" "operation_count:100000" "record_count:100000" "read_proportion:$var1" "update_proportion:$var2" "scan_proportion:$var3" "insert_proportion:$var4" "rmw_proportion:$var5" "scan_proportion:$var6" "delete_proportion:$var7"
-        make memcached-benchmarks
+        make benchmark-memcached
         mv data/curated data/$line-curated
         zip -r "data/$line-curated.zip" "data/$line-curated"
         scp "data/$line-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results/$host_name-$line-curated.zip

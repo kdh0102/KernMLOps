@@ -1,6 +1,3 @@
-chunk_index="$1" # Get the chunk index (M, 0-based) from the second argument
-num_chunks="$2"  # Get the chunk size (N) from the first argument
-
 create_yaml_file() {
     local filename="$1"
     shift
@@ -31,16 +28,12 @@ create_yaml_file() {
     done
 }
 
-dir_path="/KernMLOps/stress_ng_combinations"
 host_name=$(hostname)
-
-dirs=("$dir_path"/*/)
-total_dirs=${#dirs[@]}
-
 config_file_path="memcached_config/solutions.txt"
 
 if [[ -f "$config_file_path" ]]; then
-    while IFS= read -r line || [[ -n "$line" ]]; do
+    mapfile -t lines < "$config_file_path"
+    for line in "${lines[@]}"; do
         IFS="-" read -r var1 var2 var3 var4 var5 var6 var7 <<< "$line"
         echo "Parsed values: $var1, $var2, $var3, $var4, $var5, $var6, $var7"
         rm -rf data/curated

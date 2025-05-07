@@ -41,11 +41,11 @@ if [[ -f "$config_file_path" ]]; then
             rm -rf data/curated
             create_yaml_file "overrides.yaml" "operation_count:100000" "record_count:100000" "read_proportion:$var1" "update_proportion:$var2" "scan_proportion:$var3" "insert_proportion:$var4" "rmw_proportion:$var5" "scan_proportion:$var6" "delete_proportion:$var7" "workload:workload$workload"
             make benchmark-memcached
-            mv data/curated data/$line-curated
-            zip -r "data/$line-curated.zip" "data/$line-curated"
-            scp "data/$line-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results/$host_name-$line-curated.zip
-            rm -rf data/$line-curated
-            rm -rf data/$line-curated.zip
+            mv data/curated data/$workload-$line-curated
+            zip -r "data/$workload-$line-curated.zip" "data/$workload-$line-curated"
+            scp "data/$workload-$line-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results/$host_name-$workload-$line-curated.zip
+            rm -rf data/$workload-$line-curated
+            rm -rf data/$workload-$line-curated.zip
         done < "$config_file_path"
     done
 else

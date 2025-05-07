@@ -27,6 +27,7 @@ class MemcachedConfig(ConfigBase):
     rmw_proportion: float = 0.00
     scan_proportion: float = 0.00
     delete_proportion: float = 0.00
+    workload: str = "workloada"
 
     # Distribution and performance parameters
     request_distribution: str = "uniform"
@@ -125,7 +126,7 @@ class MemcachedBenchmark(Benchmark):
                 "memcached",
                 "-s",
                 "-P",
-                f"{self.benchmark_dir}/YCSB/workloads/workloada",
+                f"{self.benchmark_dir}/YCSB/workloads/{self.config.workload}",
                 "-p",
                 "memcached.hosts=localhost:11211",
                 "-p",
@@ -142,7 +143,7 @@ class MemcachedBenchmark(Benchmark):
             "memcached",
             "-s",
             "-P",
-            f"{self.benchmark_dir}/YCSB/workloads/workloada",
+            f"{self.benchmark_dir}/YCSB/workloads/{self.config.workload}",
             "-p",
             f"operationcount={self.config.operation_count}",
             "-p",

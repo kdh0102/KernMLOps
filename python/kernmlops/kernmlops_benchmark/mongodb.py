@@ -29,6 +29,7 @@ class MongoDbConfig(ConfigBase):
     rmw_proportion: float = 0.00
     scan_proportion: float = 0.00
     delete_proportion: float = 0.00
+    workload: str = "workloada"
 
     # Distribution and performance parameters
     request_distribution: str = "uniform"
@@ -59,6 +60,7 @@ class MongoDbBenchmark(Benchmark):
         return MongoDbBenchmark(generic_config=generic_config, config=mongodb_config)
 
     def __init__(self, *, generic_config: GenericBenchmarkConfig, config: MongoDbConfig):
+        super().__init__()
         self.generic_config = generic_config
         self.config = config
         self.benchmark_dir = self.generic_config.get_benchmark_dir() / "ycsb"
@@ -115,7 +117,7 @@ class MongoDbBenchmark(Benchmark):
                 "mongodb",
                 "-s",
                 "-P",
-                f"{self.benchmark_dir}/YCSB/workloads/workloada",
+                f"{self.benchmark_dir}/YCSB/workloads/{self.config.workload}",
                 "-p",
                 f"mongodb.url={self.config.url}",
                 "-p",
@@ -135,7 +137,7 @@ class MongoDbBenchmark(Benchmark):
                 "mongodb",
                 "-s",
                 "-P",
-                f"{self.benchmark_dir}/YCSB/workloads/workloada",
+                f"{self.benchmark_dir}/YCSB/workloads/{self.config.workload}",
                 "-p",
                 f"operationcount={self.config.operation_count}",
                 "-p",
@@ -172,6 +174,11 @@ class MongoDbBenchmark(Benchmark):
     def poll(self) -> int | None:
         if self.process is None:
             raise BenchmarkNotRunningError()
+        if not self.start_timestamp:
+            self.start_timestamp = int(time.clock_gettime_ns(time.CLOCK_BOOTTIME) / 1000)
+        self.finish_timestamp = int(time.clock_gettime_ns(time.CLOCK_BOOTTIME) / 1000)
+
+
         ret = self.process.poll()
         if ret is not None:
             self.end_server()
@@ -187,6 +194,7 @@ class MongoDbBenchmark(Benchmark):
         if self.process is None:
             raise BenchmarkNotRunningError()
         self.process.terminate()
+        self.finish_timestamp = int(time.clock_gettime_ns(time.CLOCK_BOOTTIME) / 1000)
         self.end_server()
 
     def end_server(self) -> None:
@@ -208,3 +216,11 @@ class MongoDbBenchmark(Benchmark):
     def plot_events(cls, graph_engine: GraphEngine) -> None:
         if graph_engine.collection_data.benchmark != cls.name():
             raise BenchmarkNotInCollectionData()
+
+    def to_run_info_dict(self) -> dict[str, list]:
+        return {
+            "benchmark": [self.name()],
+            "start_ts_us": [self.start_timestamp],
+            "finish_ts_us": [self.finish_timestamp],
+            "return_code": [self.process.returncode],
+        }

@@ -18,7 +18,7 @@ create_yaml_file() {
     echo "      - cpu_usage" >>"$filename"
 
     echo "benchmark_config:" >>"$filename"
-    echo "  memcached:" >>"$filename"
+    echo "  $target:" >>"$filename"
 
 
     # Loop through the remaining arguments

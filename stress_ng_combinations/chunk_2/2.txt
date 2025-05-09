@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fallocate 20 --tlb-shootdown 20
+timeout 5.0 stress-ng --mutex 40
 
 
 

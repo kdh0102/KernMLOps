@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fallocate 20 --radixsort 20 --tlb-shootdown 20
+timeout 5.0 stress-ng --pagemove 20
 
 
 

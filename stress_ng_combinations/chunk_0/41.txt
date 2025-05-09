@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --radixsort 20 --readahead 20 --tlb-shootdown 1
+timeout 5.0 stress-ng --bitops 40
 
 
 

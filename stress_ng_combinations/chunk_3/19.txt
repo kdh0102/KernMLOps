@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fallocate 40 --radixsort 1 --tlb-shootdown 40
+timeout 5.0 stress-ng --sigtrap 20
 
 
 

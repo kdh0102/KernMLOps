@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fallocate 1 --radixsort 40 --readahead 40
+timeout 5.0 stress-ng --ioport 1
 
 
 

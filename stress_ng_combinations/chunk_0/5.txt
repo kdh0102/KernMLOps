@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --readahead 1 --tlb-shootdown 1
+timeout 5.0 stress-ng --acl 40
 
 
 

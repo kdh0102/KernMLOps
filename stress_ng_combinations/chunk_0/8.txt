@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --readahead 20
+timeout 5.0 stress-ng --af-alg 40
 
 
 

@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --fallocate 20 --readahead 1
+timeout 5.0 stress-ng --nanosleep 20
 
 
 

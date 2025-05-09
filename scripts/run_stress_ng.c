@@ -4,7 +4,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#define INTERVAL  10000000 // 10ms in nanoseconds
+#define INTERVAL  100000000 // 100ms in nanoseconds
 #define BASE_PATH "/KernMLOps/scripts/"
 
 void execute_command(const char* command) {

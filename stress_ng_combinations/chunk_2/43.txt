@@ -1,10 +1,14 @@
-timeout 5.0 stress-ng --personality 20
 
 
 
 
+timeout 8.1 stress-ng --clone 30% &
+timeout 8.9 stress-ng --cache 25% &
 
+timeout 7.5 stress-ng --sync-file 70% &
+timeout 8.5 stress-ng --readahead 15% &
 
+timeout 3.2 stress-ng --flipflop 75% &
 
 
 
@@ -15,6 +19,7 @@ timeout 5.0 stress-ng --personality 20
 
 
 
+timeout 5.8 stress-ng --fallocate 50% &
 
 
 
@@ -35,18 +40,23 @@ timeout 5.0 stress-ng --personality 20
 
 
 
+timeout 3.6 stress-ng --sendfile 65% &
+timeout 3.8 stress-ng --radixsort 10% &
 
 
+timeout 1.4 stress-ng --dekker 30% &
 
 
 
 
+timeout 1.9 stress-ng --flipflop 80% &
 
 
 
 
 
 
+timeout 4.2 stress-ng --tlb-shootdown 20% &
 
 
 
@@ -63,6 +73,7 @@ timeout 5.0 stress-ng --personality 20
 
 
 
+timeout 1.9 stress-ng --flipflop 60% &
 
 
 
@@ -73,418 +84,7 @@ timeout 5.0 stress-ng --personality 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --fallocate 45% &
 
 
 

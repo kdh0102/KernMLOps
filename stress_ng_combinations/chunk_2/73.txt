@@ -1,9 +1,10 @@
-timeout 5.0 stress-ng --powmath 20
 
+timeout 8.4 stress-ng --flipflop 90% &
 
 
 
 
+timeout 6.7 stress-ng --clone 5% &
 
 
 
@@ -15,11 +16,14 @@ timeout 5.0 stress-ng --powmath 20
 
 
 
+timeout 6.6 stress-ng --cache 85% &
 
 
 
 
+timeout 4.9 stress-ng --radixsort 95% &
 
+timeout 3.4 stress-ng --fallocate 70% &
 
 
 
@@ -28,18 +32,21 @@ timeout 5.0 stress-ng --powmath 20
 
 
 
+timeout 6.5 stress-ng --tlb-shootdown 60% &
 
 
 
 
 
 
+timeout 2.9 stress-ng --sendfile 45% &
 
 
 
 
 
 
+timeout 2.1 stress-ng --dekker 55% &
 
 
 
@@ -50,12 +57,15 @@ timeout 5.0 stress-ng --powmath 20
 
 
 
+timeout 3.8 stress-ng --sync-file 70% &
+timeout 2.3 stress-ng --readahead 10% &
 
 
 
 
 
 
+timeout 3.0 stress-ng --fallocate 75% &
 
 
 
@@ -65,6 +75,7 @@ timeout 5.0 stress-ng --powmath 20
 
 
 
+timeout 1.4 stress-ng --clone 45% &
 
 
 
@@ -72,419 +83,8 @@ timeout 5.0 stress-ng --powmath 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --cache 5% &
+timeout 1.0 stress-ng --flipflop 40% &
 
 
 

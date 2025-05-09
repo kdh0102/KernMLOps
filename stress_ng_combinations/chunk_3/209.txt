@@ -1,8 +1,10 @@
-timeout 5.0 stress-ng --vm-addr 40
 
+timeout 9.2 stress-ng --tlb-shootdown 65% &
 
 
+timeout 8.1 stress-ng --clone 65% & timeout 4.4 stress-ng --sendfile 70% &
 
+timeout 1.6 stress-ng --dekker 75% &
 
 
 
@@ -11,7 +13,9 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 8.3 stress-ng --readahead 55% &
 
+timeout 5.9 stress-ng --flipflop 35% &
 
 
 
@@ -22,6 +26,8 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 2.6 stress-ng --sync-file 65% &
+timeout 2.7 stress-ng --cache 50% &
 
 
 
@@ -29,6 +35,7 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 4.2 stress-ng --fallocate 90% &
 
 
 
@@ -49,6 +56,7 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 2.6 stress-ng --radixsort 35% &
 
 
 
@@ -56,6 +64,7 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 3.4 stress-ng --sync-file 75% &
 
 
 
@@ -63,424 +72,15 @@ timeout 5.0 stress-ng --vm-addr 40
 
 
 
+timeout 1.8 stress-ng --cache 30% & timeout 1.7 stress-ng --dekker 55% &
 
 
+timeout 1.7 stress-ng --sendfile 45% &
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.6 stress-ng --fallocate 70% &
 
 
 

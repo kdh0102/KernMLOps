@@ -1,0 +1,100 @@
+timeout 9.6 stress-ng --tlb-shootdown 65% & timeout 3.4 stress-ng --sendfile 95% &
+timeout 9.6 stress-ng --radixsort 20% &
+
+
+
+
+
+
+
+
+
+
+
+
+timeout 4.0 stress-ng --fallocate 5% & timeout 6.0 stress-ng --clone 20% &
+
+
+
+
+timeout 8.0 stress-ng --sync-file 15% &
+
+timeout 3.3 stress-ng --dekker 80% &
+
+timeout 3.9 stress-ng --cache 95% &
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+timeout 5.0 stress-ng --readahead 35% &
+
+
+
+
+
+
+
+
+timeout 2.8 stress-ng --sendfile 85% &
+
+
+
+timeout 2.5 stress-ng --flipflop 75% &
+
+
+
+
+
+
+
+
+
+
+timeout 1.6 stress-ng --cache 55% &
+
+
+timeout 2.1 stress-ng --dekker 25% &
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+timeout 1.0 stress-ng --fallocate 60% &
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

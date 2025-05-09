@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --matrix 20
+timeout 1.9 stress-ng --sendfile 30% &
 
 
 
@@ -8,7 +8,10 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
+timeout 4.7 stress-ng --radixsort 55% & timeout 7.6 stress-ng --clone 95% & timeout 5.1 stress-ng --flipflop 15% &
 
+timeout 4.0 stress-ng --fallocate 70% &
+timeout 3.0 stress-ng --readahead 20% &
 
 
 
@@ -21,6 +24,7 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
+timeout 7.1 stress-ng --dekker 80% &
 
 
 
@@ -30,6 +34,7 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
+timeout 3.2 stress-ng --sendfile 10% &
 
 
 
@@ -40,8 +45,10 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
+timeout 4.0 stress-ng --tlb-shootdown 95% & timeout 2.6 stress-ng --cache 75% &
 
 
+timeout 4.1 stress-ng --readahead 80% & timeout 4.8 stress-ng --sync-file 100% &
 
 
 
@@ -51,6 +58,7 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
+timeout 3.0 stress-ng --fallocate 15% &
 
 
 
@@ -60,415 +68,7 @@ timeout 5.0 stress-ng --matrix 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 3.0 stress-ng --flipflop 60% &
 
 
 

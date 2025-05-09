@@ -1,4 +1,6 @@
-timeout 5.0 stress-ng --bad-altstack 20
+timeout 1.8 stress-ng --readahead 75% &
+timeout 2.8 stress-ng --fallocate 90% &
+timeout 8.1 stress-ng --tlb-shootdown 100% &
 
 
 
@@ -6,19 +8,23 @@ timeout 5.0 stress-ng --bad-altstack 20
 
 
 
+timeout 7.2 stress-ng --clone 25% &
 
+timeout 4.0 stress-ng --cache 85% & timeout 2.6 stress-ng --flipflop 50% &
 
 
 
 
 
 
+timeout 6.4 stress-ng --readahead 50% &
 
 
 
 
 
 
+timeout 7.3 stress-ng --dekker 85% &
 
 
 
@@ -38,6 +44,7 @@ timeout 5.0 stress-ng --bad-altstack 20
 
 
 
+timeout 2.7 stress-ng --flipflop 40% & timeout 2.8 stress-ng --sync-file 65% &
 
 
 
@@ -46,11 +53,13 @@ timeout 5.0 stress-ng --bad-altstack 20
 
 
 
+timeout 2.3 stress-ng --radixsort 85% &
 
 
 
 
 
+timeout 2.6 stress-ng --cache 95% &
 
 
 
@@ -58,6 +67,7 @@ timeout 5.0 stress-ng --bad-altstack 20
 
 
 
+timeout 1.7 stress-ng --sendfile 5% &
 
 
 
@@ -74,417 +84,7 @@ timeout 5.0 stress-ng --bad-altstack 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --readahead 5% & timeout 1.4 stress-ng --tlb-shootdown 15% &
 
 
 

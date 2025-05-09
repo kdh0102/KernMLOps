@@ -1,6 +1,7 @@
-timeout 5.0 stress-ng --x86syscall 20
 
 
+timeout 8.1 stress-ng --readahead 35% &
+timeout 6.2 stress-ng --tlb-shootdown 95% & timeout 6.8 stress-ng --dekker 10% &
 
 
 
@@ -22,21 +23,25 @@ timeout 5.0 stress-ng --x86syscall 20
 
 
 
+timeout 1.8 stress-ng --sync-file 25% &
 
 
 
 
+timeout 2.1 stress-ng --flipflop 15% &
 
 
 
 
 
+timeout 3.0 stress-ng --radixsort 60% & timeout 1.1 stress-ng --sendfile 50% &
 
 
 
 
 
 
+timeout 2.8 stress-ng --clone 60% &
 
 
 
@@ -45,13 +50,17 @@ timeout 5.0 stress-ng --x86syscall 20
 
 
 
+timeout 1.6 stress-ng --sendfile 50% &
 
 
 
 
+timeout 3.2 stress-ng --fallocate 50% &
 
 
+timeout 3.6 stress-ng --cache 70% &
 
+timeout 3.6 stress-ng --flipflop 40% &
 
 
 
@@ -64,7 +73,9 @@ timeout 5.0 stress-ng --x86syscall 20
 
 
 
+timeout 1.2 stress-ng --dekker 60% &
 
+timeout 1.8 stress-ng --sendfile 25% &
 
 
 
@@ -75,418 +86,7 @@ timeout 5.0 stress-ng --x86syscall 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --readahead 20% &
 
 
 

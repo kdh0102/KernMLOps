@@ -1,4 +1,3 @@
-timeout 5.0 stress-ng --dirdeep 40
 
 
 
@@ -7,9 +6,13 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 1.2 stress-ng --sync-file 85% &
+timeout 2.6 stress-ng --dekker 5% &
 
 
+timeout 2.7 stress-ng --tlb-shootdown 50% &
 
+timeout 2.2 stress-ng --fallocate 45% &
 
 
 
@@ -17,9 +20,12 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 3.9 stress-ng --readahead 10% &
 
 
 
+timeout 2.0 stress-ng --sync-file 40% &
+timeout 6.8 stress-ng --cache 25% &
 
 
 
@@ -28,6 +34,7 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 6.1 stress-ng --radixsort 75% &
 
 
 
@@ -35,6 +42,8 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 1.5 stress-ng --fallocate 95% &
+timeout 2.3 stress-ng --sendfile 35% &
 
 
 
@@ -43,12 +52,14 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 2.2 stress-ng --clone 95% & timeout 1.9 stress-ng --dekker 65% &
 
 
 
 
 
 
+timeout 2.6 stress-ng --fallocate 10% & timeout 3.5 stress-ng --flipflop 60% &
 
 
 
@@ -56,435 +67,24 @@ timeout 5.0 stress-ng --dirdeep 40
 
 
 
+timeout 3.0 stress-ng --tlb-shootdown 90% &
 
 
 
+timeout 1.2 stress-ng --sendfile 35% &
 
 
 
 
+timeout 1.8 stress-ng --clone 15% &
 
 
+timeout 1.8 stress-ng --dekker 25% &
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --readahead 80% &
 
 
 

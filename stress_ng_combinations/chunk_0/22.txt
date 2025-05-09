@@ -1,10 +1,11 @@
-timeout 5.0 stress-ng --apparmor 20
 
 
 
 
 
+timeout 2.6 stress-ng --sync-file 70% &
 
+timeout 8.3 stress-ng --sendfile 80% &
 
 
 
@@ -12,14 +13,18 @@ timeout 5.0 stress-ng --apparmor 20
 
 
 
+timeout 6.9 stress-ng --tlb-shootdown 15% &
 
 
+timeout 4.2 stress-ng --fallocate 95% &
 
 
 
 
+timeout 6.9 stress-ng --readahead 100% &
 
 
+timeout 1.1 stress-ng --cache 100% &
 
 
 
@@ -27,12 +32,15 @@ timeout 5.0 stress-ng --apparmor 20
 
 
 
+timeout 4.1 stress-ng --clone 40% &
 
+timeout 5.8 stress-ng --sync-file 55% &
 
 
 
 
 
+timeout 3.4 stress-ng --dekker 70% &
 
 
 
@@ -42,11 +50,13 @@ timeout 5.0 stress-ng --apparmor 20
 
 
 
+timeout 3.6 stress-ng --radixsort 100% &
 
 
 
 
 
+timeout 2.9 stress-ng --cache 5% &
 
 
 
@@ -70,419 +80,9 @@ timeout 5.0 stress-ng --apparmor 20
 
 
 
+timeout 1.0 stress-ng --flipflop 20% &
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.2 stress-ng --fallocate 5% &
 
 
 

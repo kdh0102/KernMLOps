@@ -1,10 +1,12 @@
-timeout 5.0 stress-ng --memhotplug 1
 
 
 
+timeout 4.1 stress-ng --sendfile 80% &
 
 
+timeout 8.8 stress-ng --clone 85% &
 
+timeout 6.3 stress-ng --flipflop 50% &
 
 
 
@@ -18,13 +20,16 @@ timeout 5.0 stress-ng --memhotplug 1
 
 
 
+timeout 6.5 stress-ng --readahead 90% &
 
 
 
 
 
+timeout 3.9 stress-ng --dekker 35% &
 
 
+timeout 3.4 stress-ng --radixsort 50% &
 
 
 
@@ -35,11 +40,14 @@ timeout 5.0 stress-ng --memhotplug 1
 
 
 
+timeout 5.2 stress-ng --sync-file 70% &
 
 
 
+timeout 3.3 stress-ng --cache 10% &
 
 
+timeout 3.6 stress-ng --fallocate 55% & timeout 2.5 stress-ng --sendfile 85% &
 
 
 
@@ -59,6 +67,7 @@ timeout 5.0 stress-ng --memhotplug 1
 
 
 
+timeout 2.8 stress-ng --tlb-shootdown 45% & timeout 2.8 stress-ng --dekker 50% &
 
 
 
@@ -70,6 +79,7 @@ timeout 5.0 stress-ng --memhotplug 1
 
 
 
+timeout 1.8 stress-ng --cache 10% &
 
 
 
@@ -78,417 +88,7 @@ timeout 5.0 stress-ng --memhotplug 1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --radixsort 35% &
 
 
 

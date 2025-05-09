@@ -1,4 +1,3 @@
-timeout 5.0 stress-ng --far-branch 20
 
 
 
@@ -9,7 +8,9 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
+timeout 5.6 stress-ng --sync-file 100% &
 
+timeout 7.6 stress-ng --tlb-shootdown 55% &
 
 
 
@@ -17,13 +18,17 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
+timeout 3.7 stress-ng --radixsort 90% &
 
 
 
+timeout 7.1 stress-ng --dekker 100% &
 
 
+timeout 2.7 stress-ng --readahead 55% &
 
 
+timeout 3.1 stress-ng --cache 80% &
 
 
 
@@ -40,6 +45,7 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
+timeout 1.6 stress-ng --flipflop 20% &
 
 
 
@@ -49,12 +55,14 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
+timeout 2.6 stress-ng --fallocate 70% &
 
 
 
 
 
 
+timeout 2.8 stress-ng --clone 85% &
 
 
 
@@ -62,8 +70,11 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
+timeout 1.4 stress-ng --flipflop 15% &
+timeout 1.0 stress-ng --sendfile 55% &
 
 
+timeout 1.2 stress-ng --sync-file 35% &
 
 
 
@@ -76,418 +87,7 @@ timeout 5.0 stress-ng --far-branch 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --cache 15% &
 
 
 

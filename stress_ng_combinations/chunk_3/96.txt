@@ -1,4 +1,4 @@
-timeout 5.0 stress-ng --sysbadaddr 1
+timeout 6.6 stress-ng --flipflop 15% &
 
 
 
@@ -7,8 +7,10 @@ timeout 5.0 stress-ng --sysbadaddr 1
 
 
 
+timeout 4.6 stress-ng --readahead 55% &
 
 
+timeout 3.7 stress-ng --sync-file 35% &
 
 
 
@@ -29,6 +31,7 @@ timeout 5.0 stress-ng --sysbadaddr 1
 
 
 
+timeout 5.3 stress-ng --radixsort 25% &
 
 
 
@@ -39,8 +42,11 @@ timeout 5.0 stress-ng --sysbadaddr 1
 
 
 
+timeout 1.5 stress-ng --cache 40% &
 
 
+timeout 1.8 stress-ng --fallocate 95% &
+timeout 1.0 stress-ng --dekker 90% &
 
 
 
@@ -53,21 +59,27 @@ timeout 5.0 stress-ng --sysbadaddr 1
 
 
 
+timeout 3.0 stress-ng --readahead 15% &
 
 
 
 
 
 
+timeout 2.2 stress-ng --tlb-shootdown 100% &
 
 
+timeout 2.6 stress-ng --clone 20% &
 
 
 
+timeout 1.4 stress-ng --fallocate 70% &
+timeout 1.9 stress-ng --cache 50% &
 
 
 
 
+timeout 1.2 stress-ng --sendfile 5% & timeout 1.3 stress-ng --flipflop 5% &
 
 
 
@@ -75,419 +87,7 @@ timeout 5.0 stress-ng --sysbadaddr 1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --sync-file 40% &
 
 
 

@@ -1,12 +1,17 @@
-timeout 5.0 stress-ng --fd-fork 20
 
+timeout 9.3 stress-ng --tlb-shootdown 20% &
+timeout 8.7 stress-ng --clone 75% &
 
 
 
 
+timeout 2.5 stress-ng --radixsort 80% &
 
 
+timeout 5.4 stress-ng --cache 5% &
 
+timeout 8.2 stress-ng --sendfile 30% &
+timeout 7.5 stress-ng --dekker 5% &
 
 
 
@@ -20,6 +25,7 @@ timeout 5.0 stress-ng --fd-fork 20
 
 
 
+timeout 3.3 stress-ng --flipflop 30% &
 
 
 
@@ -37,6 +43,7 @@ timeout 5.0 stress-ng --fd-fork 20
 
 
 
+timeout 3.6 stress-ng --radixsort 35% &
 
 
 
@@ -46,6 +53,7 @@ timeout 5.0 stress-ng --fd-fork 20
 
 
 
+timeout 1.3 stress-ng --readahead 80% &
 
 
 
@@ -53,9 +61,11 @@ timeout 5.0 stress-ng --fd-fork 20
 
 
 
+timeout 2.2 stress-ng --flipflop 90% &
 
 
 
+timeout 2.2 stress-ng --fallocate 40% &
 
 
 
@@ -68,419 +78,9 @@ timeout 5.0 stress-ng --fd-fork 20
 
 
 
+timeout 1.1 stress-ng --cache 50% &
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.8 stress-ng --sync-file 45% &
 
 
 

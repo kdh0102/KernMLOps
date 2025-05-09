@@ -1,29 +1,35 @@
-timeout 5.0 stress-ng --dev-shm 20
 
 
+timeout 6.3 stress-ng --flipflop 70% & timeout 9.5 stress-ng --sync-file 60% &
 
 
 
 
 
 
+timeout 7.1 stress-ng --clone 65% &
 
 
 
 
+timeout 3.8 stress-ng --tlb-shootdown 65% &
 
 
 
 
 
+timeout 5.7 stress-ng --cache 50% &
 
+timeout 5.0 stress-ng --radixsort 20% &
 
 
 
+timeout 6.7 stress-ng --readahead 75% &
 
 
 
 
+timeout 5.9 stress-ng --fallocate 5% &
 
 
 
@@ -41,11 +47,13 @@ timeout 5.0 stress-ng --dev-shm 20
 
 
 
+timeout 4.3 stress-ng --sendfile 50% &
 
 
 
 
 
+timeout 1.6 stress-ng --tlb-shootdown 30% &
 
 
 
@@ -53,6 +61,7 @@ timeout 5.0 stress-ng --dev-shm 20
 
 
 
+timeout 3.7 stress-ng --dekker 65% &
 
 
 
@@ -62,6 +71,7 @@ timeout 5.0 stress-ng --dev-shm 20
 
 
 
+timeout 2.6 stress-ng --tlb-shootdown 55% &
 
 
 
@@ -76,419 +86,9 @@ timeout 5.0 stress-ng --dev-shm 20
 
 
 
+timeout 1.0 stress-ng --cache 90% &
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --radixsort 95% & timeout 1.0 stress-ng --flipflop 50% &
 
 
 

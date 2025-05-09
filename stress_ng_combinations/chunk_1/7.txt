@@ -1,20 +1,25 @@
-timeout 5.0 stress-ng --getrandom 20
 
 
 
+timeout 8.1 stress-ng --tlb-shootdown 15% &
 
 
 
+timeout 3.7 stress-ng --sync-file 70% &
 
 
 
 
+timeout 7.3 stress-ng --fallocate 40% &
 
 
 
+timeout 5.1 stress-ng --dekker 55% &
 
+timeout 1.4 stress-ng --clone 70% &
 
 
+timeout 3.0 stress-ng --sendfile 40% &
 
 
 
@@ -31,6 +36,9 @@ timeout 5.0 stress-ng --getrandom 20
 
 
 
+timeout 2.6 stress-ng --cache 100% &
+timeout 4.6 stress-ng --clone 55% & timeout 2.5 stress-ng --flipflop 100% &
+timeout 2.0 stress-ng --readahead 80% &
 
 
 
@@ -42,6 +50,7 @@ timeout 5.0 stress-ng --getrandom 20
 
 
 
+timeout 3.1 stress-ng --sync-file 25% &
 
 
 
@@ -54,431 +63,22 @@ timeout 5.0 stress-ng --getrandom 20
 
 
 
+timeout 2.1 stress-ng --radixsort 80% &
 
 
 
+timeout 2.9 stress-ng --flipflop 85% &
 
 
 
 
 
+timeout 1.1 stress-ng --readahead 75% &
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.2 stress-ng --cache 80% &
 
 
 

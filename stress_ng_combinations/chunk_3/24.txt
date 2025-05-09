@@ -1,18 +1,20 @@
-timeout 5.0 stress-ng --sigvtalrm 1
 
 
 
 
+timeout 2.3 stress-ng --dekker 70% & timeout 7.8 stress-ng --flipflop 30% &
 
 
 
 
+timeout 7.5 stress-ng --radixsort 80% &
 
 
 
 
 
 
+timeout 6.4 stress-ng --cache 5% &
 
 
 
@@ -26,6 +28,7 @@ timeout 5.0 stress-ng --sigvtalrm 1
 
 
 
+timeout 6.4 stress-ng --readahead 30% & timeout 1.8 stress-ng --tlb-shootdown 85% &
 
 
 
@@ -46,6 +49,8 @@ timeout 5.0 stress-ng --sigvtalrm 1
 
 
 
+timeout 3.1 stress-ng --tlb-shootdown 90% &
+timeout 1.2 stress-ng --sendfile 20% &
 
 
 
@@ -55,433 +60,28 @@ timeout 5.0 stress-ng --sigvtalrm 1
 
 
 
+timeout 2.0 stress-ng --clone 10% & timeout 2.1 stress-ng --sync-file 15% &
 
 
 
 
+timeout 1.0 stress-ng --sendfile 75% &
 
 
+timeout 1.4 stress-ng --dekker 20% &
 
 
 
 
 
 
+timeout 2.2 stress-ng --fallocate 10% &
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.5 stress-ng --tlb-shootdown 50% &
 
 
 

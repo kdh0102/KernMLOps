@@ -1,4 +1,3 @@
-timeout 5.0 stress-ng --matrix-3d 1
 
 
 
@@ -7,10 +6,15 @@ timeout 5.0 stress-ng --matrix-3d 1
 
 
 
+timeout 2.3 stress-ng --readahead 35% &
+timeout 5.5 stress-ng --flipflop 20% &
 
 
+timeout 7.0 stress-ng --clone 25% &
 
 
+timeout 1.3 stress-ng --sendfile 10% &
+timeout 6.0 stress-ng --cache 15% & timeout 3.8 stress-ng --sync-file 35% &
 
 
 
@@ -21,6 +25,7 @@ timeout 5.0 stress-ng --matrix-3d 1
 
 
 
+timeout 2.3 stress-ng --radixsort 30% &
 
 
 
@@ -30,11 +35,13 @@ timeout 5.0 stress-ng --matrix-3d 1
 
 
 
+timeout 3.6 stress-ng --fallocate 80% & timeout 4.3 stress-ng --sendfile 60% &
 
 
 
 
 
+timeout 4.7 stress-ng --dekker 25% &
 
 
 
@@ -47,6 +54,8 @@ timeout 5.0 stress-ng --matrix-3d 1
 
 
 
+timeout 1.7 stress-ng --tlb-shootdown 80% &
+timeout 4.2 stress-ng --readahead 15% &
 
 
 
@@ -71,416 +80,7 @@ timeout 5.0 stress-ng --matrix-3d 1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.4 stress-ng --fallocate 55% &
 
 
 

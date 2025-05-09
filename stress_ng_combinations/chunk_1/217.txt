@@ -1,27 +1,33 @@
-timeout 5.0 stress-ng --mmaphuge 20
 
 
 
 
+timeout 7.5 stress-ng --dekker 70% &
 
 
 
 
 
 
+timeout 3.8 stress-ng --tlb-shootdown 40% &
+timeout 1.2 stress-ng --flipflop 95% &
 
 
 
+timeout 3.4 stress-ng --fallocate 100% &
 
+timeout 7.5 stress-ng --readahead 85% &
 
 
 
 
+timeout 6.8 stress-ng --cache 55% &
 
 
 
 
 
+timeout 5.3 stress-ng --radixsort 60% &
 
 
 
@@ -36,25 +42,31 @@ timeout 5.0 stress-ng --mmaphuge 20
 
 
 
+timeout 2.0 stress-ng --sendfile 50% &
 
+timeout 5.3 stress-ng --flipflop 65% &
 
 
 
 
 
 
+timeout 1.2 stress-ng --tlb-shootdown 25% &
 
 
 
 
 
+timeout 3.2 stress-ng --sync-file 10% &
 
 
 
+timeout 1.3 stress-ng --clone 40% &
 
 
 
 
+timeout 2.1 stress-ng --fallocate 100% &
 
 
 
@@ -72,422 +84,10 @@ timeout 5.0 stress-ng --mmaphuge 20
 
 
 
+timeout 1.0 stress-ng --clone 30% &
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.1 stress-ng --radixsort 60% &
 
 
 

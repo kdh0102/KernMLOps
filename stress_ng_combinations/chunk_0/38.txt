@@ -1,17 +1,21 @@
-timeout 5.0 stress-ng --bitonicsort 40
 
 
 
+timeout 6.1 stress-ng --readahead 5% &
+timeout 9.3 stress-ng --flipflop 40% &
 
 
+timeout 9.1 stress-ng --sendfile 50% &
 
 
 
+timeout 2.4 stress-ng --cache 50% &
 
 
 
 
 
+timeout 4.3 stress-ng --sync-file 55% &
 
 
 
@@ -19,12 +23,16 @@ timeout 5.0 stress-ng --bitonicsort 40
 
 
 
+timeout 7.0 stress-ng --fallocate 85% &
 
 
 
 
 
+timeout 5.3 stress-ng --radixsort 10% &
+timeout 6.7 stress-ng --tlb-shootdown 75% &
 
+timeout 2.0 stress-ng --clone 40% &
 
 
 
@@ -39,6 +47,7 @@ timeout 5.0 stress-ng --bitonicsort 40
 
 
 
+timeout 4.4 stress-ng --dekker 95% &
 
 
 
@@ -57,6 +66,7 @@ timeout 5.0 stress-ng --bitonicsort 40
 
 
 
+timeout 2.4 stress-ng --cache 40% &
 
 
 
@@ -75,418 +85,8 @@ timeout 5.0 stress-ng --bitonicsort 40
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.2 stress-ng --sync-file 85% &
+timeout 1.1 stress-ng --readahead 35% &
 
 
 

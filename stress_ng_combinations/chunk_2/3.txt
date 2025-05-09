@@ -1,9 +1,13 @@
-timeout 5.0 stress-ng --nanosleep 1
+timeout 6.4 stress-ng --radixsort 95% &
 
 
 
+timeout 8.1 stress-ng --flipflop 60% &
 
+timeout 7.9 stress-ng --fallocate 70% &
 
+timeout 3.9 stress-ng --clone 25% &
+timeout 4.4 stress-ng --readahead 30% &
 
 
 
@@ -16,11 +20,15 @@ timeout 5.0 stress-ng --nanosleep 1
 
 
 
+timeout 4.0 stress-ng --tlb-shootdown 15% &
 
 
+timeout 6.7 stress-ng --cache 100% &
 
 
+timeout 6.0 stress-ng --sendfile 95% &
 
+timeout 2.2 stress-ng --dekker 80% &
 
 
 
@@ -46,10 +54,12 @@ timeout 5.0 stress-ng --nanosleep 1
 
 
 
+timeout 4.4 stress-ng --sync-file 65% &
 
 
 
 
+timeout 3.0 stress-ng --clone 70% &
 
 
 
@@ -60,6 +70,7 @@ timeout 5.0 stress-ng --nanosleep 1
 
 
 
+timeout 1.3 stress-ng --tlb-shootdown 95% &
 
 
 
@@ -72,421 +83,10 @@ timeout 5.0 stress-ng --nanosleep 1
 
 
 
+timeout 1.1 stress-ng --readahead 90% &
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --dekker 50% &
 
 
 

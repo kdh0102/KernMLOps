@@ -1,6 +1,7 @@
-timeout 5.0 stress-ng --landlock 1
+timeout 9.3 stress-ng --flipflop 80% &
 
 
+timeout 1.8 stress-ng --tlb-shootdown 50% &
 
 
 
@@ -11,6 +12,7 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
+timeout 8.3 stress-ng --readahead 60% &
 
 
 
@@ -19,6 +21,7 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
+timeout 2.2 stress-ng --fallocate 20% &
 
 
 
@@ -28,6 +31,7 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
+timeout 3.7 stress-ng --clone 90% &
 
 
 
@@ -37,9 +41,11 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
+timeout 1.8 stress-ng --radixsort 25% &
 
 
 
+timeout 1.9 stress-ng --sync-file 45% &
 
 
 
@@ -50,13 +56,17 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
+timeout 3.3 stress-ng --tlb-shootdown 90% &
 
 
 
+timeout 2.4 stress-ng --cache 55% &
 
 
 
+timeout 3.0 stress-ng --dekker 15% &
 
+timeout 2.7 stress-ng --sendfile 45% &
 
 
 
@@ -71,417 +81,7 @@ timeout 5.0 stress-ng --landlock 1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.4 stress-ng --fallocate 45% &
 
 
 

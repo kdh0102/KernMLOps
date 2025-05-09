@@ -1,7 +1,9 @@
-timeout 5.0 stress-ng --netlink-proc 1
 
 
+timeout 9.3 stress-ng --readahead 90% &
+timeout 9.4 stress-ng --flipflop 55% &
 
+timeout 3.9 stress-ng --clone 85% &
 
 
 
@@ -10,6 +12,8 @@ timeout 5.0 stress-ng --netlink-proc 1
 
 
 
+timeout 8.1 stress-ng --radixsort 20% &
+timeout 4.3 stress-ng --cache 20% &
 
 
 
@@ -29,11 +33,13 @@ timeout 5.0 stress-ng --netlink-proc 1
 
 
 
+timeout 2.3 stress-ng --fallocate 65% &
 
 
 
 
 
+timeout 5.5 stress-ng --tlb-shootdown 55% &
 
 
 
@@ -48,9 +54,12 @@ timeout 5.0 stress-ng --netlink-proc 1
 
 
 
+timeout 2.5 stress-ng --sync-file 20% &
+timeout 2.2 stress-ng --sendfile 30% &
 
 
 
+timeout 3.4 stress-ng --cache 75% &
 
 
 
@@ -61,6 +70,7 @@ timeout 5.0 stress-ng --netlink-proc 1
 
 
 
+timeout 1.8 stress-ng --dekker 25% &
 
 
 
@@ -74,421 +84,11 @@ timeout 5.0 stress-ng --netlink-proc 1
 
 
 
+timeout 1.3 stress-ng --clone 10% &
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --sync-file 50% &
 
 
 

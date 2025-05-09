@@ -1,20 +1,24 @@
-timeout 5.0 stress-ng --forkheavy 20
 
 
 
 
+timeout 8.8 stress-ng --sync-file 75% &
 
 
 
 
+timeout 3.4 stress-ng --readahead 85% & timeout 2.2 stress-ng --clone 70% &
 
 
 
+timeout 3.7 stress-ng --tlb-shootdown 25% &
+timeout 3.0 stress-ng --fallocate 35% &
 
 
 
 
 
+timeout 2.3 stress-ng --cache 15% & timeout 2.4 stress-ng --sendfile 95% &
 
 
 
@@ -22,19 +26,23 @@ timeout 5.0 stress-ng --forkheavy 20
 
 
 
+timeout 7.1 stress-ng --flipflop 100% &
 
 
 
 
+timeout 4.6 stress-ng --radixsort 90% &
 
 
 
 
 
 
+timeout 4.3 stress-ng --dekker 20% &
 
 
 
+timeout 2.9 stress-ng --readahead 55% &
 
 
 
@@ -52,6 +60,8 @@ timeout 5.0 stress-ng --forkheavy 20
 
 
 
+timeout 2.3 stress-ng --tlb-shootdown 50% &
+timeout 1.7 stress-ng --cache 55% & timeout 3.3 stress-ng --sendfile 75% &
 
 
 
@@ -61,6 +71,7 @@ timeout 5.0 stress-ng --forkheavy 20
 
 
 
+timeout 2.1 stress-ng --clone 65% &
 
 
 
@@ -68,420 +79,9 @@ timeout 5.0 stress-ng --forkheavy 20
 
 
 
+timeout 1.0 stress-ng --readahead 90% &
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.7 stress-ng --radixsort 75% &
 
 
 

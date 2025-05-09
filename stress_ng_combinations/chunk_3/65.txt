@@ -1,12 +1,15 @@
-timeout 5.0 stress-ng --spinmem 40
+timeout 3.8 stress-ng --fallocate 70% & timeout 5.5 stress-ng --sendfile 40% &
 
 
+timeout 8.3 stress-ng --sync-file 80% &
 
 
 
 
 
 
+timeout 1.2 stress-ng --clone 5% & timeout 5.5 stress-ng --flipflop 55% &
+timeout 8.9 stress-ng --cache 90% &
 
 
 
@@ -16,6 +19,7 @@ timeout 5.0 stress-ng --spinmem 40
 
 
 
+timeout 5.2 stress-ng --dekker 100% &
 
 
 
@@ -31,9 +35,11 @@ timeout 5.0 stress-ng --spinmem 40
 
 
 
+timeout 1.2 stress-ng --clone 95% &
 
 
 
+timeout 4.7 stress-ng --radixsort 30% &
 
 
 
@@ -56,6 +62,8 @@ timeout 5.0 stress-ng --spinmem 40
 
 
 
+timeout 3.6 stress-ng --tlb-shootdown 75% &
+timeout 1.7 stress-ng --readahead 85% &
 
 
 
@@ -65,426 +73,18 @@ timeout 5.0 stress-ng --spinmem 40
 
 
 
+timeout 1.6 stress-ng --flipflop 5% &
+timeout 1.3 stress-ng --clone 85% &
 
 
+timeout 1.6 stress-ng --fallocate 100% &
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --sendfile 40% &
 
 
 

@@ -1,9 +1,14 @@
-timeout 5.0 stress-ng --fanotify 20
+timeout 8.2 stress-ng --tlb-shootdown 75% &
+timeout 3.0 stress-ng --dekker 30% &
+timeout 6.7 stress-ng --sync-file 90% &
+timeout 7.5 stress-ng --clone 10% &
 
 
 
 
 
+timeout 8.8 stress-ng --sendfile 20% &
+timeout 3.1 stress-ng --flipflop 85% &
 
 
 
@@ -14,11 +19,15 @@ timeout 5.0 stress-ng --fanotify 20
 
 
 
+timeout 7.0 stress-ng --cache 10% &
 
+timeout 6.6 stress-ng --readahead 40% &
 
 
+timeout 6.3 stress-ng --fallocate 65% &
 
 
+timeout 4.8 stress-ng --radixsort 80% &
 
 
 
@@ -32,6 +41,8 @@ timeout 5.0 stress-ng --fanotify 20
 
 
 
+timeout 2.7 stress-ng --flipflop 20% &
+timeout 2.1 stress-ng --dekker 80% &
 
 
 
@@ -60,7 +71,9 @@ timeout 5.0 stress-ng --fanotify 20
 
 
 
+timeout 1.7 stress-ng --flipflop 100% &
 
+timeout 2.1 stress-ng --dekker 95% &
 
 
 
@@ -75,420 +88,7 @@ timeout 5.0 stress-ng --fanotify 20
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+timeout 1.0 stress-ng --radixsort 70% &
 
 
 

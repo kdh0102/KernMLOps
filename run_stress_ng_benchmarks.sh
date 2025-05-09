@@ -52,12 +52,26 @@ for ((i = start_index; i < end_index && i < total_dirs; i++)); do
     cp -r "$dir" scripts/stress-ng-args
     file_count=$(find scripts/stress-ng-args -type f -name "*.txt" | wc -l)
     echo "File count: $file_count, Directory: $dir_name"
-    create_yaml_file "overrides.yaml" "starting_idx:0" "num_exps:$file_count" "num_reps:3"
-    make stress-ng-benchmarks
-    mv data/curated data/$dir_name-curated
-    zip -r "data/$dir_name-curated.zip" "data/$dir_name-curated"
-    scp "data/$dir_name-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results/$host_name-$dir_name-curated.zip
-    rm -rf data/$dir_name-curated
-    rm -rf data/$dir_name-curated.zip
-    rm -rf tmp-stress-ng-*
+
+    batch_size=128
+    num_batches=$(( (file_count + batch_size - 1) / batch_size )) # Calculate the number of batches
+
+    for ((batch = 0; batch < num_batches; batch++)); do
+        start=$((batch * batch_size))
+        end=$((start + batch_size))
+        if ((end > file_count)); then
+            end=$file_count
+        fi
+        echo "Processing batch $batch: files $start to $((end - 1))"
+        # Add any batch-specific processing logic here
+        create_yaml_file "overrides.yaml" "starting_idx:$start" "num_exps:$batch_size" "num_reps:1"
+        make stress-ng-benchmarks
+        exp_name=training-$dir_name-$batch
+        mv data/curated data/$exp_name-curated
+        zip -r "data/$exp_name-curated.zip" "data/$exp_name-curated"
+        scp "data/$exp_name-curated.zip" dhkim@mew3:/home/dhkim/kernmlops_results/$host_name-$exp_name-curated.zip
+        rm -rf data/$exp_name-curated
+        rm -rf data/$exp_name-curated.zip
+        rm -rf tmp-stress-ng-*
+    done
 done
